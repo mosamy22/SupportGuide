@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang = "en" style = "background : #d3d3d3;">
+<style>
+.l {
+    
+    padding: 10px; /*add this if you want a bit of space around the text*/
+    width:500px;
+    color:white;
+    margin-left: 250px;		
+}
+h3 {
+    color: #b75858;
+    -webkit-text-stroke-width: medium;
+    margin-left: 250px;	
+}
+.myButton {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background-color: #b75858;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+h2 {
+        color: #b75858;
+    -webkit-text-stroke-width: thin;
+}
+</style>
+  <head>
+    <meta charset = "UTF-8" />
+  </head>
+  <body>
+    <h2>EDIT</h2>
+    <form method = "POST">
+      <fieldset>
+        <legend><h2>{{app.project}}</h2></legend>
+        <p>
+          <label><h2>Description</h2></label>
+          <div><textarea  name = "description"  style = "    width: 400px;
+    height: 120px;">{{app.description}}</textarea></div>
+        </p>
+        <p>
+          <label><h3>Production Application server</h3></label>
+          <div class="l"><input type = "text" name = "pAppServer" value = "{{app.app_prod_ip}}"/></div>
+        </p>
+          <label><h3>Production database server</h3></label>
+          <div class="l"><input type = "text" name = "pDbServer" value = "{{app.db_prod_ip}}"/></div>
+        </p>
+          <label><h3>Staging Application server</h3></label>
+          <div class="l"><input type = "text" name = "sAppServer" value = "{{app.app_stage_ip}}"/></div>
+        </p>
+          <label><h3>Staging database server</h3></label>
+          <div class="l"><input type = "text" name = "sDbServer" value = "{{app.db_stage_ip}}"/></div>
+        </p>
+	<div>	
+	    <button type = "submit"  style = "margin-left: 800px;"class="myButton">Save</a>
+	</div>
+      </fieldset>
+    </form>
+  </body>
+</html>

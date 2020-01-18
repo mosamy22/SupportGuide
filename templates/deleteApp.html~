@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang = "en" style = "background : #d3d3d3;">
+<style>
+
+h1 {
+    color: red;
+    text-align: center;
+}
+.myButton {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background-color: #b75858;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+</style>
+  <head>
+    <meta charset = "UTF-8" />
+  </head>
+  <body>
+
+<h1> Are you sure you want to delete {{app.project}}? </h1>
+
+<form action="#" method = 'post'>
+
+		    <div><button type ="submit" href= "{{url_for('deleteApp',project_name = app.project)}}" style = "text-align: center;"class="myButton">Delete</a></div>
+
+</form>
+
+  </body>
+</html>

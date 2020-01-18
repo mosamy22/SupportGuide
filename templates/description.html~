@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US" style = "background : #d3d3d3;">
+<style>
+p {
+    background: #36304a;
+    padding: 10px; /*add this if you want a bit of space around the text*/
+    width:500px;
+    color:white;
+    border-radius: 10px;		
+}
+h3 {
+    color: #b75858;
+    -webkit-text-stroke-width: medium;
+}
+.myButton {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background-color: #b75858;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+  </style>
+   <head>
+      
+   </head>
+   <body>
+       <div>
+	    <h1 style="color: #b75858;-webkit-text-stroke: thin;">{{app.project}}</h1>
+	    <hr style="width:200px;margin-left: 0px;">	
+	    <div style="width:500px;height:100px;border:1px;"><p>{{app.description}}</p></div>
+	    <div style="margin-left: 250px;">
+	    <h3>Production Application server</h3>
+	    <p>{{app.app_prod_ip}}</p>
+	    <h3>Production database server</h3>
+	    <p>{{app.db_prod_ip}}</p>
+	    <h3>Staging Application server</h3>
+	    <p>{{app.app_stage_ip}}</p>
+	    <h3>Staging database server</h3>
+	    <p>{{app.db_stage_ip}}</p>
+       </div>
+	    <div>	
+	    <a href="{{url_for('EditApp',project_name = app.project)}}" style = "margin-left: 800px;"class="myButton">Edit</a>
+	    </div>
+	    <div><button type ="submit" href= "{{url_for('deleteApp',project_name = app.project)}}" style = "margin-left: 910px;margin: auto;"class="myButton">Delete</a></div>
+    </body>
+</html>	

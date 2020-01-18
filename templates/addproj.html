@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang = "en" style = "background : #d3d3d3;">
+<style>
+.l {
+    
+    padding: 10px; /*add this if you want a bit of space around the text*/
+    width:500px;
+    color:white;
+    margin-left: 250px;		
+}
+h3 {
+    color: #b75858;
+    -webkit-text-stroke-width: medium;
+    margin-left: 250px;	
+}
+
+h2 {
+    color: #b75858;
+    -webkit-text-stroke-width: thin;
+    }
+.myButton {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background-color: #b75858;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+h1 {
+	color: #36304a;
+        text-align: -webkit-center;
+}
+</style>
+  <head>
+    <meta charset = "UTF-8" />
+  </head>
+  <body>
+    <h2>Add</h2>
+    <form method = "POST">
+      <fieldset>
+        <legend><h2>New Application</h2></legend>
+	<p>
+          <label><h3>Application Name</h3></label>
+          <div class="l"><input type = "text" name = "project"/></div>
+        </p>
+        <p>
+          <label><h3>Description</h3></label>
+          <div class = "l"><textarea  name = "description"  style = "    width: 400px;
+    height: 120px;"></textarea></div>
+        </p>
+        <p>
+          <label><h3>Production Application server</h3></label>
+          <div class="l"><input type = "text" name = "pAppServer"/></div>
+        </p>
+          <label><h3>Production database server</h3></label>
+          <div class="l"><input type = "text" name = "pDbServer"/></div>
+        </p>
+          <label><h3>Staging Application server</h3></label>
+          <div class="l"><input type = "text" name = "sAppServer"/></div>
+        </p>
+          <label><h3>Staging database server</h3></label>
+          <div class="l"><input type = "text" name = "sDbServer"/></div>
+        </p>
+	<div>	
+	    <button type = "submit"  style = "margin-left: 800px;"class="myButton">Save</a>
+	</div>
+      </fieldset>
+    </form>
+  </body>
+</html>

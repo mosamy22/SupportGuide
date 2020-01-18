@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<style type="text/css">
+   .error {color: red}
+</style>
+<html lang="en-US">
+   <head>
+      <link rel="stylesheet" href="static/css/logins.css">	   
+   </head>
+
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" method = "POST" >
+      <input type="text" name = "username" placeholder="username"/>
+      <input type="password" name = "password" placeholder="password"/>
+      <button>login</button>
+        <td class="error">
+          <div style="color:red">{{error_password}}</div>  
+        </td>	
+    </form>
+  </div>
+</div>
+</html>
